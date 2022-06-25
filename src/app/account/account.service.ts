@@ -61,8 +61,8 @@ logout() {
   this.router.navigateByUrl('/');
 }
 
-checkEmailExists(email: string) {
+/**checkEmailExists(email: string) {
   return this.http.get(this.baseUrl + 'account/emailexists?email=' + email);
-}
+}**/
 
 }

@@ -10,7 +10,7 @@
             <app-text-input formControlName="password" [label]="'Password'" [type]="'password'">
             </app-text-input>
 
-            <ul class="text-danger list-unstyled" *ngIf="errors">
+            <ul class="text-danger" *ngIf="errors">
                 <li *ngFor="let error of errors">
                     {{error}}
                 </li>

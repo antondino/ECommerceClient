@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
       email: [null, 
         [Validators.required, Validators
           .pattern('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$')],
-          [this.validateEmailNotTaken]
+          //[this.validateEmailNotTaken]
         ],
       password: [null, Validators.required]
     });
@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  validateEmailNotTaken(): AsyncValidatorFn {
+  /**validateEmailNotTaken(): AsyncValidatorFn {
     return control => {
       return timer(500).pipe(
         switchMap(() => {
@@ -56,6 +56,6 @@ export class RegisterComponent implements OnInit {
         })
       );
     };
-  }
+  }**/
 
 }
