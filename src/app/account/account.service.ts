@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IUser } from '../shared/models/user';
 
@@ -30,7 +30,7 @@ export class AccountService {
           this.currentUserSource.next(user);
         }
       })
-    ) 
+    ); 
   }
 
   login(values: any) {
